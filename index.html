@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript addEventListener() Hands-On</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      background: url('Software.jpg') center/cover no-repeat;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 80px);
+      flex-direction: column;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 40px;
+      margin: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-size: 24px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>JavaScript addEventListener() Hands-On</h1>
+  </header>
+
+  <main>
+    <button id="button1">Button 1</button>
+    <button id="button2">Button 2</button>
+    <button id="button3">Button 3</button>
+  </main>
+
+  <script>
+    // Function 1
+    function button1Clicked() {
+      alert("Button 1 was clicked!");
+    }
+
+    // Function 2
+    function button2Clicked() {
+      alert("Button 2 was clicked!");
+    }
+
+    // Function 3
+    function button3Clicked() {
+      alert("Button 3 was clicked!");
+    }
+
+    // Add event listeners to the buttons
+    document.getElementById("button1").addEventListener("click", button1Clicked);
+    document.getElementById("button2").addEventListener("click", button2Clicked);
+    document.getElementById("button3").addEventListener("click", button3Clicked);
+  </script>
+
+</body>
+</html>
